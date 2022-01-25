@@ -1,10 +1,18 @@
 import './App.css';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const App = () => {
 
     const [joke, setJoke] = useState({})
 
+    useEffect(() => {
+        handleFetch()
+    }, [])
+
+    useEffect(() => {
+        console.log("The joke has changed.")
+    }, [joke])
+    
     const handleFetch = async () => {
         const response = await fetch("https://animechan.vercel.app/api/random")
         const data = await response.json()
