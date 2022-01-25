@@ -1,0 +1,154 @@
+/* BANGERS */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+/* YUJI SYUKU */
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light: #ffffff;
+    --bg: #262a2d;
+    --yellow: #Ffdb00;
+    --orange: #FF7000;
+    --cream: #Fff6bd;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    color: var(--light);
+    background-color: var(--bg);
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    /* padding-top: 40px; */
+}
+
+h1 {
+    color: var(--yellow);
+    font-size: 80px;
+    font-weight: normal;
+    font-family: "Bangers", sans-serif;
+    letter-spacing: 1px;
+    margin: 30px 0;
+}
+
+h2 {
+    color: var(--cream);
+    font-size: 34px;
+    font-weight: normal;
+    font-family: "Yuji Syuku", sans-serif;
+    letter-spacing: -2px;
+    margin-top: -20px;
+}
+
+h3, h4 {
+    color: var(--yellow);
+    font-size: 46px;
+    font-weight: normal;
+    font-family: "Bangers", "Yuji Syuku", sans-serif;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    color: var(--cream);
+    background-color: transparent;
+    border: none;
+    border: 2px solid var(--cream);
+    border-radius: 50px;
+    height: 65px;
+    width: 270px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Yuji Syuku", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, width 0.2s, font-size 0.2s;
+}
+
+button:hover {
+    color: var(--orange);
+    border-color: var(--orange);
+    width: 300px;
+    font-size: 17px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 900px;
+    height: 60vh;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+@media all and (max-width: 1024px) {
+    h1 {
+        margin: 20px 0;
+    }
+    h2 {
+        font-size: 26px;
+    }
+    h3, h4 {
+        font-size: 36px;
+    }
+    .header {
+        padding-top: 20px;
+    }
+    .content {
+        width: 70%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    h1 {
+        font-size: 70px;
+        margin: 20px 0;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3, h4 {
+        font-size: 32px;
+    }
+    button {
+        font-size: 14px;
+        width: 250px;
+    }
+    button:hover {
+        font-size: 15px;
+        width: 270px;
+    }
+}
